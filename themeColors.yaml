@@ -1,0 +1,45 @@
+fields:
+    clrHeader:
+        label: Цвет "шапки" сайта
+        type: colorpicker
+        default: '#ffffff'
+    clrBody:
+        label: Цвет фона сайта
+        type: colorpicker
+        default: '#ffffff'
+    clrFooter:
+        label: Цвет "подвала" сайта
+        type: colorpicker
+        default: '#ffffff'
+    clrHeading:
+        label: Цвет заголовков
+        type: colorpicker
+        default: '#192839'
+    clrText:
+        label: Цвет текста
+        type: colorpicker
+        default: '#5e5e5e'
+    clrLink:
+        label: Цвет ссылок
+        type: colorpicker
+        default: '#192839'
+    clrCta:
+        label: Цвет CTA элементов
+        type: colorpicker
+        default: '#2d9b27'
+    clrControl:
+      label: Цвет полей ввода
+      type: colorpicker
+      default: '#dee2e6'
+    clrSelection:
+        label: Цвет при выделении текста
+        type: colorpicker
+        default: '#ff9540'
+    clrHover:
+        label: Цвет при наведении на элементы
+        type: colorpicker
+        default: '#1d7471'
+    clrOverlay:
+        label: Цвет оверлея
+        type: colorpicker
+        default: '#515769'

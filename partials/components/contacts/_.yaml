@@ -1,0 +1,11 @@
+fields:
+  description:
+    label: Описание
+    type: richeditor
+    size: large
+    span: full
+  map:
+    label: Карта
+    type: codeeditor
+    size: small
+    span: full

@@ -1,0 +1,9 @@
+{% for item in items %}
+    {% if not item.viewBag.isHidden %}
+    <li class="px-4 mb-2"
+        {{ item.items ? 'x-data="dropdown"' : '' }}
+    >
+        {% partial __SELF__ ~ "::link" item=item %}
+    </li>
+    {% endif %}
+{% endfor %}

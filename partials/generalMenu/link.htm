@@ -1,0 +1,25 @@
+{% if item.url %}
+  <a 
+    href="{{ item.code ? item.code : item.url }}" 
+    class="
+      relative flex items-center justify-between font-nunito font-normal text-base text-gray-600 uppercase hover:opacity-70 transition-colors duration-300 py-2 lg:p-4
+      before:absolute before:left-0 before:bottom-0 before:w-0 before:hover:w-full before:h-1 before:bg-clr-cta before:transition-all before:duration-150 before:ease-in
+    "
+    {# item.items ? 'x-bind="trigger"' : '' #}
+    title="{{ item.title }}"
+    {{ item.viewBag.isExternal ? 'target="_blank"' }}
+  >
+    <span>{{ item.title }}</span>
+    {#
+    {% if item.items %}
+      {% partial 'common/icon' class="fill-transparent stroke-current stroke-2 w-6 h-6 rotate-90 lg:rotate-180 lg:w-5 lg:h-5 lg:ml-2" icon="chevron" %}
+    {% endif %}
+    #}
+  </a>
+{% else %}
+  <span 
+    class="flex items-center justify-between font-nunito font-semibold text-xl leading-5.5 tracking-wider p-4 text-secondary-dark transition-colors duration-300 lg:text-base lg:px-8 cursor-not-allowed"
+  >
+    {{ item.title }}
+  </span>
+{% endif %}

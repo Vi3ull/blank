@@ -1,0 +1,62 @@
+editor:
+  name: Редактор
+  description: Редактор
+  icon: icon-list-alt
+  fields:
+    content:
+      type: nestedform
+      form: ~/themes/intgolos/partials/components/editor/_.yaml
+
+intro:
+  name: Интро
+  description: Интро
+  icon: icon-list-alt
+  fields:
+    content:
+      type: nestedform
+      form: ~/themes/intgolos/partials/components/intro/_.yaml
+
+about_us:
+  name: О нас
+  description: О нас
+  icon: icon-list-alt
+  fields:
+    content:
+      type: nestedform
+      form: ~/themes/intgolos/partials/components/about_us/_.yaml
+
+offer:
+  name: Оффер
+  description: Оффер
+  icon: icon-list-alt
+  fields:
+    content:
+      type: nestedform
+      form: ~/themes/intgolos/partials/components/offer/_.yaml
+
+our_services:
+  name: Наши услуги
+  description: Наши услуги
+  icon: icon-list-alt
+  fields:
+    content:
+      type: nestedform
+      form: ~/themes/intgolos/partials/components/our_services/_.yaml
+
+contacts:
+  name: Контакты
+  description: Контакты
+  icon: icon-list-alt
+  fields:
+    content:
+      type: nestedform
+      form: ~/themes/intgolos/partials/components/contacts/_.yaml
+
+modal:
+  name: Модальное окно
+  description: Модальное окно
+  icon: icon-list-alt
+  fields:
+    content:
+      type: nestedform
+      form: ~/themes/intgolos/partials/components/modal/_.yaml

@@ -1,0 +1,21 @@
+<section class="relative min-h-screen flex items-center before:absolute before:inset-0 before:bg-clr-overlay/60 before:z-20">
+  <picture>
+    <img class="absolute inset-0 w-full h-full object-cover" src="{{ data.image ? data.image | media : 'assets/img/intro.webp' | theme }}" alt="">
+  </picture>
+  <div class="relative container flex flex-wrap z-40">
+    <div class="basis-full prose mx-auto prose-p:text-white prose-p:text-lg prose-p:font-light prose-strong:text-white text-center py-11 xl:pr-20">
+      {{ data.description | raw }}
+    </div>
+    <div class="basis-full flex flex-wrap items-stretch py-11">
+      {% for item in data.items %}
+      <div class="basis-full xs:basis-1/2 lg:basis-1/4">
+        <div class="h-full p-4">
+          <div class="prose prose-headings:text-clr-cta prose-headings:uppercase max-w-none prose-p:text-white text-center mt-2 mb-4">
+            {{ item.description | raw }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

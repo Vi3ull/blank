@@ -1,0 +1,33 @@
+{% for item in items %}
+    {% if not item.viewBag.isHidden %}
+    <li class="flex flex-col flex-shrink-0"
+        {# item.items ? 'x-data="dropdown"' : '' #}
+    >                                
+        {% if item.items %} 
+            {#
+            {% partial __SELF__ ~ "::link" item=item %} 
+            <ul 
+                class="dropdown scrollbar"
+                x-trap="open"
+                x-bind="dialogue"    
+            >
+                <button 
+                    type="button" 
+                    class="flex items-center w-full"
+                    x-bind="trigger"    
+                >
+                    {% partial 'common/icon' class="sm:hidden fill-transparent stroke-current stroke-2 w-4 h-4 -rotate-90" icon="chevron" %}
+                    <span class="font-sans font-medium text-lg ml-2">{{ item.title }}</span>
+                </button>
+                <li class="flex flex-col">
+                    {% partial __SELF__ ~ "::link" item=item %}
+                </li>
+                {% partial __SELF__ ~ "::items" items=item.items %}
+            </ul>
+            #}
+        {% else %}
+            {% partial __SELF__ ~ "::link" item=item %}
+        {% endif %}
+    </li>
+    {% endif %}
+{% endfor %}

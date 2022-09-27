@@ -1,0 +1,16 @@
+{% if item.url %}
+  <a 
+    href="{{ item.code ? item.code : item.url }}" 
+    class="
+      flex items-center justify-between font-nunito font-normal text-lg text-white uppercase hover:opacity-70 transition-all duration-300
+    "    
+  >
+    {{ item.title }}
+  </a>
+{% else %}
+  <span 
+    class="flex items-center justify-between font-nunito font-semibold text-xl leading-5.5 tracking-wider p-4 text-secondary-dark transition-all duration-300 lg:text-base lg:px-8 cursor-not-allowed"
+  >
+    {{ item.title }}
+  </span>
+{% endif %}

@@ -1,0 +1,9 @@
+<form action="/">
+  {% for block in components %}
+
+  {% if block._group == "intro" %}
+    {% partial "components/intro" data=block %}
+  {% endif %}
+
+  {% endfor %}
+</form>

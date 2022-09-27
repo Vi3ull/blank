@@ -1,0 +1,20 @@
+{% set blockId = random() %}
+
+<div class="form-group">
+  <textarea 
+    name="{{ name | default('field-' ~ blockId) }}" 
+    id="{{ id | default(blockId) }}" 
+    cols="{{ cols | default(30) }}" 
+    rows="{{ rows | default(10) }}"
+    placeholder="{{ placeholder | default('Введите данные...') }}" 
+    class="{{ class | default('form-textarea') }}" 
+  >
+    {{ value }}
+  </textarea>
+  <label 
+    for="{{ id | default('field-' ~ blockId) }}" 
+    class="form-label"
+  >
+    {{ label | default('Поле ввода') }}
+  </label>
+</div>

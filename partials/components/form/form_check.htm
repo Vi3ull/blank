@@ -1,0 +1,16 @@
+{% set blockId = random() %}
+
+<div class="form-check">
+  <input 
+    type="{{ type | default('checkbox') }}" 
+    id="{{ id | default(blockId) }}" 
+    name="{{ name | default('field-' ~ blockId) }}" 
+    class="form-check-control" 
+  >
+  <label 
+    for="{{ id | default('field-' ~ blockId) }}" 
+    class="form-check-label"
+  >
+    {{ label | default('Поле ввода') }}
+  </label>
+</div>

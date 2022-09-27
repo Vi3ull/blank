@@ -1,0 +1,6 @@
+{% if breadcrumbs %}
+  {{ this.page.title }}
+  {% for breadcrumb in breadcrumbs %}
+      {{ breadcrumb.title }}
+  {% endfor %}
+{% endif %}

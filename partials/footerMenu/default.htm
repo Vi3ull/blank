@@ -1,0 +1,7 @@
+{% if __SELF__.menuItems %}
+    <ul 
+        class="columns-2 lg:columns-3"
+    >
+        {% partial __SELF__ ~ "::items" items=__SELF__.menuItems %}
+    </ul>
+{% endif %}

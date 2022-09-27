@@ -1,0 +1,68 @@
+description = "Шаблон по умолчанию"
+
+[staticMenu generalMenu]
+code = "general-menu"
+
+[staticMenu footerMenu]
+code = "general-menu"
+
+[staticBreadcrumbs]
+
+[staticPage]
+useContent = 0
+default = 0
+==
+{variable 
+  name="hasBreadcrumbs"
+  tab="Контент страницы"
+  label="Добавить хлебные крошки"
+  type="switch"
+  span="full"
+}
+{/variable}
+{variable 
+  name="pageContent" 
+  tab="Контент страницы"
+  label="Контент страницы"
+  type="repeater"
+  prompt="Добавить блок"
+  style="collapsed"
+  span="full"
+  groups="~/themes/blank/partials/components/config.yaml"
+}
+{/variable}
+
+{% apply spaceless %}
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  {% partial 'common/head' %}
+</head>
+  <body 
+    class="flex flex-col min-h-screen bg-clr-body selection:bg-clr-selection selection:text-white"
+  >
+    {{ this.theme.include_body_begin }}
+    {% partial 'common/header' %}
+
+    {% if this.page.id != 'index' and disable_breadcrumbs == false %}
+        {% partial 'common/breadcrumbs' %}
+    {% endif %}
+    
+    <div 
+      class="flex-grow"
+    >
+      <main>
+        {% page %}
+        {% for block in pageContent %}
+          {% partial 'components/' ~ block._group ~ '/_' data=block.content %}
+        {% endfor %}
+      </main>    
+    </div>
+    
+    {% partial 'common/footer' %}
+    
+    {% partial 'common/scripts' %}
+    {{ this.theme.include_body_end }}
+  </body>
+</html>
+{% endapply %}

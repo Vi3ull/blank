@@ -1,0 +1,4 @@
+fields:
+  content: 
+    type: richeditor
+    size: large
